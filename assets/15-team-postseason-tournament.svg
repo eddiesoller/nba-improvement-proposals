@@ -1,0 +1,213 @@
+<svg viewBox="0 0 950 580" xmlns="http://www.w3.org/2000/svg">
+  <rect width="950" height="580" fill="#0a0a0f"/>
+
+  <!--
+    GRID: divider y = 120, 240, 360, 480  (spacing=120)
+    Box: top=div-18, bottom=div+18
+    Derived:
+      M11 div = (360+480)/2 = 420
+      M13 div = (120+240)/2 = 180
+      M12 div = 420  (straight from M11)
+      M14 div = (180+420)/2 = 300  (vertical centre of bracket)
+  -->
+
+  <!-- Title -->
+  <text x="475" y="20" text-anchor="middle" font-family="system-ui,sans-serif" font-size="14" font-weight="700" fill="#f5a623" letter-spacing="1">NBA CONFERENCE TOURNAMENT — 15 TEAM FORMAT</text>
+
+  <!-- Round labels -->
+  <text x="95"  y="42" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8.5" font-weight="600" fill="#555" letter-spacing="1.5">FIRST ROUND</text>
+  <text x="285" y="42" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8.5" font-weight="600" fill="#555" letter-spacing="1.5">SECOND ROUND</text>
+  <text x="475" y="42" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8.5" font-weight="600" fill="#555" letter-spacing="1.5">THIRD ROUND</text>
+  <text x="655" y="42" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8.5" font-weight="600" fill="#555" letter-spacing="1.5">CONF SEMIFINALS</text>
+  <text x="835" y="42" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8.5" font-weight="600" fill="#555" letter-spacing="1.5">CONF FINALS</text>
+
+  <!-- Format badges -->
+  <rect x="25"  y="48" width="140" height="13" rx="3" fill="#1e1b3a"/>
+  <text x="95"  y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7.5" font-weight="600" fill="#a5b4fc" letter-spacing="0.8">SINGLE GAME</text>
+  <rect x="215" y="48" width="140" height="13" rx="3" fill="#1e1b3a"/>
+  <text x="285" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7.5" font-weight="600" fill="#a5b4fc" letter-spacing="0.8">SINGLE GAME</text>
+  <rect x="405" y="48" width="140" height="13" rx="3" fill="#2a1f0a"/>
+  <text x="475" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7.5" font-weight="600" fill="#f5a623" letter-spacing="0.8">BEST OF 5</text>
+  <rect x="585" y="48" width="140" height="13" rx="3" fill="#2a0e0a"/>
+  <text x="655" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7.5" font-weight="600" fill="#f87171" letter-spacing="0.8">BEST OF 7</text>
+  <rect x="765" y="48" width="140" height="13" rx="3" fill="#2a0e0a"/>
+  <text x="835" y="58" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7.5" font-weight="600" fill="#f87171" letter-spacing="0.8">BEST OF 7</text>
+
+  <!-- Lottery cutoff line at x=565 (between R3 right edge 555 and Semis left edge 575) -->
+  <line x1="565" y1="32" x2="565" y2="502" stroke="#777" stroke-width="1" stroke-dasharray="5,4" opacity="0.45"/>
+  <text transform="rotate(-90,561,300)" x="561" y="300" text-anchor="middle"
+        font-family="system-ui,sans-serif" font-size="7.5" font-weight="600"
+        fill="#777" letter-spacing="1.2" opacity="0.65">LOTTERY CUTOFF</text>
+
+  <!-- ═══════════ CONNECTORS ═══════════ -->
+
+  <!-- R1 → R2: straight horizontals, same divider y -->
+  <line x1="175" y1="120" x2="205" y2="120" stroke="#6366f1" stroke-width="1.5" opacity="0.55"/>
+  <line x1="175" y1="240" x2="205" y2="240" stroke="#6366f1" stroke-width="1.5" opacity="0.55"/>
+  <line x1="175" y1="360" x2="205" y2="360" stroke="#6366f1" stroke-width="1.5" opacity="0.55"/>
+  <line x1="175" y1="480" x2="205" y2="480" stroke="#6366f1" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- R2 → R3 top: M8(120)→M9(120) and M7(240)→M10(240) straight -->
+  <line x1="365" y1="120" x2="395" y2="120" stroke="#6366f1" stroke-width="1.5" opacity="0.55"/>
+  <line x1="365" y1="240" x2="395" y2="240" stroke="#6366f1" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- R2 → R3 bottom: M5(360) and M6(480) merge → M11(420) -->
+  <line x1="365" y1="360" x2="382" y2="360" stroke="#6366f1" stroke-width="1.5" opacity="0.55"/>
+  <line x1="365" y1="480" x2="382" y2="480" stroke="#6366f1" stroke-width="1.5" opacity="0.55"/>
+  <line x1="382" y1="360" x2="382" y2="480" stroke="#6366f1" stroke-width="1.5" opacity="0.55"/>
+  <line x1="382" y1="420" x2="395" y2="420" stroke="#6366f1" stroke-width="1.5" opacity="0.55"/>
+
+  <!-- R3 → Semis top: M9(120) and M10(240) merge → M13(180) -->
+  <line x1="555" y1="120" x2="565" y2="120" stroke="#f5a623" stroke-width="1.5" opacity="0.6"/>
+  <line x1="555" y1="240" x2="565" y2="240" stroke="#f5a623" stroke-width="1.5" opacity="0.6"/>
+  <line x1="565" y1="120" x2="565" y2="240" stroke="#f5a623" stroke-width="1.5" opacity="0.6"/>
+  <line x1="565" y1="180" x2="575" y2="180" stroke="#f5a623" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- R3 → Semis bottom: M11(420)→M12(420) straight -->
+  <line x1="555" y1="420" x2="575" y2="420" stroke="#f5a623" stroke-width="1.5" opacity="0.6"/>
+
+  <!-- Semis → Finals: M13(180) and M12(420) merge → M14(300) -->
+  <line x1="735" y1="180" x2="745" y2="180" stroke="#e8442a" stroke-width="1.5" opacity="0.65"/>
+  <line x1="735" y1="420" x2="745" y2="420" stroke="#e8442a" stroke-width="1.5" opacity="0.65"/>
+  <line x1="745" y1="180" x2="745" y2="420" stroke="#e8442a" stroke-width="1.5" opacity="0.65"/>
+  <line x1="745" y1="300" x2="755" y2="300" stroke="#e8442a" stroke-width="1.5" opacity="0.65"/>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- ROUND 1   x=15   stroke=#6366f1                    -->
+  <!-- ═══════════════════════════════════════════════════ -->
+
+  <!-- M1  #8 v #15   div=120 -->
+  <rect x="15" y="102" width="160" height="36" rx="4" fill="#111118" stroke="#6366f1" stroke-width="1.2"/>
+  <rect x="15" y="102" width="4" height="36" rx="2" fill="#6366f1"/>
+  <line x1="19" y1="120" x2="175" y2="120" stroke="#1a1a28" stroke-width="1"/>
+  <text x="23" y="116" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6366f1">M1</text>
+  <text x="37" y="116" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#8</text>
+  <text x="37" y="134" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#15</text>
+
+  <!-- M2  #9 v #14   div=240 -->
+  <rect x="15" y="222" width="160" height="36" rx="4" fill="#111118" stroke="#6366f1" stroke-width="1.2"/>
+  <rect x="15" y="222" width="4" height="36" rx="2" fill="#6366f1"/>
+  <line x1="19" y1="240" x2="175" y2="240" stroke="#1a1a28" stroke-width="1"/>
+  <text x="23" y="236" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6366f1">M2</text>
+  <text x="37" y="236" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#9</text>
+  <text x="37" y="254" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#14</text>
+
+  <!-- M4  #11 v #12   div=360 -->
+  <rect x="15" y="342" width="160" height="36" rx="4" fill="#111118" stroke="#6366f1" stroke-width="1.2"/>
+  <rect x="15" y="342" width="4" height="36" rx="2" fill="#6366f1"/>
+  <line x1="19" y1="360" x2="175" y2="360" stroke="#1a1a28" stroke-width="1"/>
+  <text x="23" y="356" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6366f1">M4</text>
+  <text x="37" y="356" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#11</text>
+  <text x="37" y="374" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#12</text>
+
+  <!-- M3  #10 v #13   div=480 -->
+  <rect x="15" y="462" width="160" height="36" rx="4" fill="#111118" stroke="#6366f1" stroke-width="1.2"/>
+  <rect x="15" y="462" width="4" height="36" rx="2" fill="#6366f1"/>
+  <line x1="19" y1="480" x2="175" y2="480" stroke="#1a1a28" stroke-width="1"/>
+  <text x="23" y="476" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6366f1">M3</text>
+  <text x="37" y="476" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#10</text>
+  <text x="37" y="494" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#13</text>
+
+  <!-- ═══════════════════════════════════════════════════ -->
+  <!-- ROUND 2   x=205  stroke=#6366f1                    -->
+  <!-- Identical dividers to Round 1: 120, 240, 360, 480  -->
+  <!-- ═══════════════════════════════════════════════════ -->
+
+  <!-- M8  #7 v W(M1)   div=120 -->
+  <rect x="205" y="102" width="160" height="36" rx="4" fill="#111118" stroke="#6366f1" stroke-width="1.2"/>
+  <rect x="205" y="102" width="4" height="36" rx="2" fill="#6366f1"/>
+  <line x1="209" y1="120" x2="365" y2="120" stroke="#1a1a28" stroke-width="1"/>
+  <text x="213" y="116" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6366f1">M8</text>
+  <text x="227" y="116" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#7</text>
+
+  <!-- M7  #6 v W(M2)   div=240 -->
+  <rect x="205" y="222" width="160" height="36" rx="4" fill="#111118" stroke="#6366f1" stroke-width="1.2"/>
+  <rect x="205" y="222" width="4" height="36" rx="2" fill="#6366f1"/>
+  <line x1="209" y1="240" x2="365" y2="240" stroke="#1a1a28" stroke-width="1"/>
+  <text x="213" y="236" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6366f1">M7</text>
+  <text x="227" y="236" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#6</text>
+
+  <!-- M5  #4 v W(M4)   div=360 -->
+  <rect x="205" y="342" width="160" height="36" rx="4" fill="#111118" stroke="#6366f1" stroke-width="1.2"/>
+  <rect x="205" y="342" width="4" height="36" rx="2" fill="#6366f1"/>
+  <line x1="209" y1="360" x2="365" y2="360" stroke="#1a1a28" stroke-width="1"/>
+  <text x="213" y="356" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6366f1">M5</text>
+  <text x="227" y="356" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#4</text>
+
+  <!-- M6  #5 v W(M3)   div=480 -->
+  <rect x="205" y="462" width="160" height="36" rx="4" fill="#111118" stroke="#6366f1" stroke-width="1.2"/>
+  <rect x="205" y="462" width="4" height="36" rx="2" fill="#6366f1"/>
+  <line x1="209" y1="480" x2="365" y2="480" stroke="#1a1a28" stroke-width="1"/>
+  <text x="213" y="476" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#6366f1">M6</text>
+  <text x="227" y="476" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#5</text>
+
+  <!-- ═════════════════════════════════════════════════════════════ -->
+  <!-- THIRD ROUND   x=395  stroke=#f5a623                         -->
+  <!-- M9 div=120, M10 div=240: aligned with R2 top pair           -->
+  <!-- M11 div=420: midpoint of R2 bottom pair (360+480)/2         -->
+  <!-- ═════════════════════════════════════════════════════════════ -->
+
+  <!-- M9  #2 v W(M8)   div=120 -->
+  <rect x="395" y="102" width="160" height="36" rx="4" fill="#111118" stroke="#f5a623" stroke-width="1.2"/>
+  <rect x="395" y="102" width="4" height="36" rx="2" fill="#f5a623"/>
+  <line x1="399" y1="120" x2="555" y2="120" stroke="#1a1a28" stroke-width="1"/>
+  <text x="403" y="116" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#f5a623">M9</text>
+  <text x="417" y="116" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#2</text>
+
+  <!-- M10  #3 v W(M7)   div=240 -->
+  <rect x="395" y="222" width="160" height="36" rx="4" fill="#111118" stroke="#f5a623" stroke-width="1.2"/>
+  <rect x="395" y="222" width="4" height="36" rx="2" fill="#f5a623"/>
+  <line x1="399" y1="240" x2="555" y2="240" stroke="#1a1a28" stroke-width="1"/>
+  <text x="403" y="236" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#f5a623">M10</text>
+  <text x="421" y="236" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#3</text>
+
+  <!-- M11  W(M5) v W(M6)   div=420 -->
+  <rect x="395" y="402" width="160" height="36" rx="4" fill="#111118" stroke="#f5a623" stroke-width="1.2"/>
+  <rect x="395" y="402" width="4" height="36" rx="2" fill="#f5a623"/>
+  <line x1="399" y1="420" x2="555" y2="420" stroke="#1a1a28" stroke-width="1"/>
+  <text x="403" y="416" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#f5a623">M11</text>
+
+  <!-- ═════════════════════════════════════════════════════════════ -->
+  <!-- CONF SEMIFINALS   x=575  stroke=#e8442a                     -->
+  <!-- M13 div=180: midpoint of (120+240)                          -->
+  <!-- M12 div=420: aligned with M11                               -->
+  <!-- ═════════════════════════════════════════════════════════════ -->
+
+  <!-- M13  W(M9) v W(M10)   div=180 -->
+  <rect x="575" y="162" width="160" height="36" rx="4" fill="#111118" stroke="#e8442a" stroke-width="1.5"/>
+  <rect x="575" y="162" width="4" height="36" rx="2" fill="#e8442a"/>
+  <line x1="579" y1="180" x2="735" y2="180" stroke="#1a1a28" stroke-width="1"/>
+  <text x="583" y="176" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#e8442a">M13</text>
+
+  <!-- M12  #1 v W(M11)   div=420 -->
+  <rect x="575" y="402" width="160" height="36" rx="4" fill="#111118" stroke="#e8442a" stroke-width="1.5"/>
+  <rect x="575" y="402" width="4" height="36" rx="2" fill="#e8442a"/>
+  <line x1="579" y1="420" x2="735" y2="420" stroke="#1a1a28" stroke-width="1"/>
+  <text x="583" y="416" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#e8442a">M12</text>
+  <text x="597" y="416" font-family="system-ui,sans-serif" font-size="11" font-weight="600" fill="#e0e0ee">#1</text>
+
+  <!-- ═════════════════════════════════════════════════════════════ -->
+  <!-- CONF FINALS   x=755  stroke=#e8442a                         -->
+  <!-- M14 div=300: midpoint of (180+420), exact vertical centre   -->
+  <!-- ═════════════════════════════════════════════════════════════ -->
+
+  <!-- M14  W(M13) v W(M12)   div=300 -->
+  <rect x="755" y="282" width="160" height="36" rx="4" fill="#131018" stroke="#e8442a" stroke-width="1.8"/>
+  <rect x="755" y="282" width="4" height="36" rx="2" fill="#e8442a"/>
+  <line x1="759" y1="300" x2="915" y2="300" stroke="#1e1218" stroke-width="1"/>
+  <text x="763" y="296" font-family="system-ui,sans-serif" font-size="7" font-weight="700" fill="#e8442a">M14</text>
+
+  <text x="835" y="336" text-anchor="middle" font-family="system-ui,sans-serif" font-size="8" fill="#e8442a" letter-spacing="0.8" opacity="0.7">CONFERENCE CHAMPION</text>
+
+  <!-- LEGEND -->
+  <rect x="15"  y="530" width="11" height="11" rx="2" fill="#6366f1" opacity="0.85"/>
+  <text x="30"  y="539" font-family="system-ui,sans-serif" font-size="8.5" fill="#555">Single Game</text>
+  <rect x="115" y="530" width="11" height="11" rx="2" fill="#f5a623" opacity="0.85"/>
+  <text x="130" y="539" font-family="system-ui,sans-serif" font-size="8.5" fill="#555">Best of 5</text>
+  <rect x="200" y="530" width="11" height="11" rx="2" fill="#e8442a" opacity="0.85"/>
+  <text x="215" y="539" font-family="system-ui,sans-serif" font-size="8.5" fill="#555">Best of 7</text>
+  <line x1="305" y1="535" x2="330" y2="535" stroke="#777" stroke-width="1" stroke-dasharray="4,3" opacity="0.7"/>
+  <text x="335" y="539" font-family="system-ui,sans-serif" font-size="8.5" fill="#555">Lottery Cutoff — teams eliminated left of line enter the draft lottery</text>
+
+  <text x="475" y="562" text-anchor="middle" font-family="system-ui,sans-serif" font-size="7.5" fill="#2e2e3e" letter-spacing="0.2">Lottery odds determined solely by rounds appeared before elimination — seed has no bearing on lottery position</text>
+</svg>
